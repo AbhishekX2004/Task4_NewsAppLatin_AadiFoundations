@@ -4,8 +4,8 @@ const Box = document.querySelector("#post-container");
 // asynchronous function to fetch data from the given url
 async function fetchData(url) {
     const response = await fetch(url);
-    if (!response.ok) { 
-        throw new Error('Network response was not ok'); 
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
     }
     return response.json();
 }
@@ -52,7 +52,7 @@ async function fetchComments(postId) {
         Box.innerHTML = '';     // reseting the Box
         const postElem = createPostElement(post, userData);
         Box.appendChild(postElem);
-        
+
         // heading for comment
         const comHead = document.createElement('h2');
         comHead.innerHTML = "Comments :- "
@@ -94,7 +94,7 @@ function createCommentElement(comment) {
         <h3>${comment.name}</h3>
         <p><b>Email: </b>${comment.email}</p>
         <p>${comment.body}</p>`;
-        
+
     setTimeout(() => {
         commentElem.classList.add('zoom-in');
     }, 100);

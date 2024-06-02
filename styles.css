@@ -57,25 +57,28 @@ button {
 
 @keyframes bounceInDown {
     0% {
-      transform: translateY(-1000px);
-      opacity: 0;
+        transform: translateY(-1000px);
+        opacity: 0;
     }
+
     60% {
-      transform: translateY(25px);
-      opacity: 1;
+        transform: translateY(25px);
+        opacity: 1;
     }
+
     75% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
+
     90% {
-      transform: translateY(5px);
+        transform: translateY(5px);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  .bounce-in-down {
+}
+
+.bounce-in-down {
     animation: bounceInDown 1s ease-out;
-  }
-  
+}
