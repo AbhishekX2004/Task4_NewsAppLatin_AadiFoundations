@@ -13,8 +13,13 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-h1 {
+h1, .footer {
     text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(28, 206, 206);
 }
 
 button {
