@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-.container{
+.container {
     max-width: 800px;
     margin: 60px auto;
     padding: 30px;
@@ -13,11 +13,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-button{
+button {
     display: block;
     width: 100%;
     padding: 11px;
@@ -26,14 +26,56 @@ button{
     border: none;
 }
 
-button:hover{
+button:hover {
     background-color: #4e4b4ba4;
 }
 
-#post-container{
+#post-container {
     margin-top: 30px;
 }
 
-.post, button{
+.post,
+button {
     border-radius: 25px;
 }
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease-out;
+}
+
+@keyframes bounceInDown {
+    0% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(25px);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(-10px);
+    }
+    90% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .bounce-in-down {
+    animation: bounceInDown 1s ease-out;
+  }
+  

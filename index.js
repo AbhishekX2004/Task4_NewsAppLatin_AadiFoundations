@@ -56,8 +56,9 @@ async function fetchComments(postId) {
         // heading for comment
         const comHead = document.createElement('h2');
         comHead.innerHTML = "Comments :- "
-
+        comHead.classList.add("zoom-in");
         Box.appendChild(comHead);
+
         comments.forEach(comment => {
             const commentElem = createCommentElement(comment);
             Box.appendChild(commentElem);
@@ -79,6 +80,9 @@ function createPostElement(post, user) {
         <p>${post.body}</p>
         <hr/>
         `;
+    setTimeout(() => {
+        postElem.classList.add('zoom-in');
+    }, 100);
     return postElem;
 }
 
@@ -90,6 +94,10 @@ function createCommentElement(comment) {
         <h3>${comment.name}</h3>
         <p><b>Email: </b>${comment.email}</p>
         <p>${comment.body}</p>`;
+        
+    setTimeout(() => {
+        commentElem.classList.add('zoom-in');
+    }, 100);
     return commentElem;
 }
 
